@@ -80,9 +80,14 @@ public class MainActivity extends AppCompatActivity {
                 String nameResponse = nameInput.getText().toString();
                 String numberResponse = numberInput.getText().toString();
                 String paxResponse = paxInput.getText().toString();
-                String tableResponse;
+                String tableResponse, timeResponse;
                 String dateResponse = String.format("Date: %d/%d/%d", datePicker.getDayOfMonth(), datePicker.getMonth() + 1, datePicker.getYear());
-                String timeResponse = String.format("Time : %d:%d", timePicker.getCurrentHour(), timePicker.getCurrentMinute());
+
+                // Adds a 0 in the beginning of the minutes if the minute input is less than 10
+                if (timePicker.getCurrentMinute() < 10)
+                    timeResponse = String.format("Time : %d:0%d", timePicker.getCurrentHour(), timePicker.getCurrentMinute());
+                else
+                    timeResponse = String.format("Time : %d:%d", timePicker.getCurrentHour(), timePicker.getCurrentMinute());
 
                 // Checking which radio button user has pressed
                 if (tableRadioGroup.getCheckedRadioButtonId() == R.id.nonSmokingRadio)
