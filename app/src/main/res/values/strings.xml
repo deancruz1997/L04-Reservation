@@ -2,4 +2,16 @@
     <string name="app_name">L04-Reservation</string>
     <string name="time">Time</string>
     <string name="date">Date</string>
+    <string name="reserv">Reserv</string>
+    <string name="name">Name:</string>
+    <string name="enter_your_full_name">Enter your full name</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="number_of_people">Number of People:</string>
+    <string name="enter_number_of_people">Enter number of people</string>
+    <string name="table_preference">Table Preference:</string>
+    <string name="non_smoking">Non-Smoking</string>
+    <string name="smoking">Smoking</string>
+    <string name="reserve">Reserve</string>
+    <string name="reset">Reset</string>
 </resources>

@@ -1,55 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="Reserv"
+        android:text="@string/reserv"
         android:textSize="30dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/listDivider" />
 
     <LinearLayout
         android:id="@+id/NameContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/nameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/name" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/nameInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
-            android:text="Name" />
+            android:hint="@string/enter_your_full_name"
+            android:inputType="text" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/NumberContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/numberText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/phone_number" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/numberInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/enter_your_phone_number"
             android:inputType="number" />
     </LinearLayout>
 
@@ -57,56 +70,68 @@
         android:id="@+id/PaxAndTableContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/PaxContainer"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/paxText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/number_of_people" />
 
             <EditText
-                android:id="@+id/editTextText2"
-                android:layout_width="wrap_content"
+                android:id="@+id/paxInput"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:ems="10"
-                android:inputType="text"
-                android:text="Name" />
+                android:hint="Enter no. of pax"
+                android:inputType="number" />
+
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/TableOptionsContainer"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tableText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/table_preference" />
 
             <RadioGroup
+                android:id="@+id/tableRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/nonSmokingRadio"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@string/non_smoking"
+                    android:textSize="11sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/smokingRadio"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@string/smoking"
+                    android:textSize="11sp" />
             </RadioGroup>
         </LinearLayout>
 
@@ -116,6 +141,7 @@
         android:id="@+id/DateAndTimeContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -180,21 +206,30 @@
         android:id="@+id/ButtonContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:id="@+id/submitButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="@string/reserve" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:id="@+id/resetButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="@string/reset" />
 
     </LinearLayout>
 
