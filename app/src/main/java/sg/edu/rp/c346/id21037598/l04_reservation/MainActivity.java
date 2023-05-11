@@ -107,9 +107,9 @@ public class MainActivity extends AppCompatActivity {
                     dateDisplay.setText(dateResponse);
                     timeDisplay.setText(timeResponse);
 
-                    Toast.makeText(submitButton.getContext(), "Registration Successful!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(submitButton.getContext(), "Registration Successful!", Toast.LENGTH_SHORT).show();
                 } else
-                    Toast.makeText(submitButton.getContext(), "Error. Please fill in all fields.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(submitButton.getContext(), "Error. Please fill in all fields.", Toast.LENGTH_SHORT).show();
             }
         });
 
