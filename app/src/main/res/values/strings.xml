@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">L04-Reservation</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
 </resources>
